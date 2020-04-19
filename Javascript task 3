@@ -1,0 +1,14 @@
+ } else if (data.principal >= 2500 && data.time >= 3) {
+      data.rate = 4
+    } else if (data.principal < 2500 || data.time <= 1) {
+      data.rate = 2
+    } else (data.rate = 1)
+    const interest = (data.principal * data.time * data.rate) / 100
+    data.interest = interest
+    newData.push(data)
+  });
+  return newData
+}
+
+answer = interestCalculator(values)
+/* console.log(answer) */
